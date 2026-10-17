@@ -1,5 +1,6 @@
+
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 const Home = lazy(() => import("./pages/Home.jsx"));
 const Projects = lazy(() => import("./pages/Projects.jsx"));
@@ -11,7 +12,7 @@ function Loading() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <>
       <nav>
         <Link to="/">Home</Link>
         <Link to="/projects">Projects</Link>
@@ -25,6 +26,6 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </>
   );
 }
