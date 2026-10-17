@@ -1,0 +1,67 @@
+
+* { box-sizing: border-box; }
+
+:root {
+  font-family: Inter, "Segoe UI", sans-serif;
+  color: #e9edf7;
+  background: #101522;
+  font-synthesis: none;
+}
+
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+a { color: inherit; text-decoration: none; }
+
+.app-shell { min-height: 100vh; }
+.navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 22px 8%; border-bottom: 1px solid #293147;
+  background: #151c2c;
+}
+.brand { font-size: 23px; font-weight: 800; }
+.brand span { color: #8c83ff; }
+nav { display: flex; gap: 26px; }
+nav a { color: #aab4c9; }
+nav a.active, nav a:hover { color: #a69eff; }
+
+.content { width: min(1000px, 88%); margin: 70px auto; min-height: 65vh; }
+.eyebrow { color: #a69eff; letter-spacing: 2px; font-size: 12px; font-weight: 700; }
+h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.1; margin: 18px 0; }
+.muted { color: #aab4c9; line-height: 1.7; }
+.hero { padding: 28px 0; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 45px; }
+.stat, .contact-card, .task {
+  background: #1a2234; border: 1px solid #2c3650;
+  border-radius: 14px; padding: 22px;
+}
+.stat span, .stat strong { display: block; }
+.stat span { color: #aab4c9; margin-bottom: 12px; }
+.stat strong { font-size: 20px; }
+.task-form { display: flex; gap: 10px; margin: 30px 0; }
+input {
+  flex: 1; min-width: 0; padding: 14px; border-radius: 9px;
+  border: 1px solid #39445e; background: #151c2c; color: white;
+}
+button {
+  padding: 13px 20px; border: 0; border-radius: 9px;
+  background: #8c83ff; color: #111426; font-weight: 700; cursor: pointer;
+}
+.task-list { display: grid; gap: 12px; }
+.task { display: flex; align-items: center; gap: 14px; }
+.task strong { font-size: 16px; }
+.task p { margin-bottom: 0; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: #f2bd69; }
+.dot.done { background: #6ed6a2; }
+.priority { margin-left: auto; color: #c1baff; font-size: 12px; }
+.notice { color: #f2bd69; }
+.contact-card { padding: 32px; }
+.contact-card a { color: #a69eff; text-decoration: underline; }
+footer { text-align: center; padding: 25px; color: #8792aa; border-top: 1px solid #293147; }
+
+.loading { padding: 40px; text-align: center; color: #a69eff; }
+@media (max-width: 600px) {
+  .navbar { padding: 18px 5%; gap: 16px; flex-wrap: wrap; }
+  nav { gap: 14px; font-size: 14px; }
+  .content { margin: 42px auto; }
+  .stats { grid-template-columns: 1fr; }
+  .task-form { flex-direction: column; }
+}
